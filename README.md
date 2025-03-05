@@ -20,11 +20,9 @@ Em seguida as funções:
 - Verifica se há amigos na lista.
 - Sorteia um nome aleatório do array amigos.
 - Exibe o nome do amigo secreto na tela. 
-## Execução do Projeto
-Clone este repositório ou copie o código para o seu ambiente de desenvolvimento. Abra o arquivo index.html no seu navegador.
+## Acessando o Projeto
+Link: https://chaleenge-do-amigo-secreto.vercel.app/ 
 Comece a adicionar amigos e divirta-se!
-
-
 ## Contato:
 Se você tiver dúvidas ou sugestões, sinta-se à vontade para entrar em contato:
 Nome: Thalita Santos
