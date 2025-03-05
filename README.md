@@ -28,6 +28,6 @@ Comece a adicionar amigos e divirta-se!
 ## Contato:
 Se você tiver dúvidas ou sugestões, sinta-se à vontade para entrar em contato:
 Nome: Thalita Santos
-GitHub: seu-usuario
+GitHub: Thalita2021
 
 Divirta-se sorteando seus amigos secretos!
