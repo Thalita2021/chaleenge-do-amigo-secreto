@@ -1,36 +1,41 @@
 let amigos = [];
+
+
 function adicionarAmigo() {
-    let inputAmigo = document.getElementById('amigo');
+    let input = document.getElementById('amigo');
+    let nomeAmigo = input.value.trim(); 
+
     if (nomeAmigo === '') {
-        alert('Insira um nome válido.');
-        return;
-    }
-    if (amigos.map(amigo => amigo.toLowerCase()).includes(nomeAmigo.toLowerCase())) {
-        alert('Este nome já foi adicionado. Insira um nome diferente.');
+        alert('Por favor, digite um nome válido.');
         return;
     }
     amigos.push(nomeAmigo);
-    inputAmigo.value = '';
-    inputAmigo.focus();
-    atualizarListaAmigos();
+    input.value = '';
+    input.focus();  
+    atualizarLista();
 }
-function atualizarListaAmigos() {
-    let lista = document.getElementById('listaAmigos');
-    lista.innerHTML = ''; 
-    
-    for (let i = 0; i < amigos.length; i++) {
+
+function atualizarLista() {
+    const listaAmigos = document.getElementById('listaAmigos');
+    listaAmigos.innerHTML = ''; 
+    amigos.forEach((amigo) => {
         let li = document.createElement('li');
-        li.textContent = amigos[i]; 
-        lista.appendChild(li); 
-    }
+        li.textContent = amigo;
+        listaAmigos.appendChild(li);
+    });
 }
+
 function sortearAmigo() {
-    if (amigos.length == 0) {
-        alert('Adicione amigos antes de sortear.');
-        return; 
+    if (amigos.length === 0) {
+        alert('Adicione pelo menos um amigo antes de sortear.');
+        return;
     }
-    let amigoAleatorio = Math.floor(Math.random() * amigos.length);    
-    let amigoSorteado = amigos[amigoAleatorio];
+    let indiceSorteado = Math.floor(Math.random() * amigos.length);
+    let amigoSorteado = amigos[indiceSorteado];
+
     let resultado = document.getElementById('resultado');
-    resultado.innerHTML = `<li>O amigo secreto é: <strong>${amigoSorteado}</strong></li>`;
+    resultado.innerHTML = ''; 
+    let liResultado = document.createElement('li');
+    liResultado.textContent = `O amigo secreto é: ${amigoSorteado}`;
+    resultado.appendChild(liResultado);
 }
